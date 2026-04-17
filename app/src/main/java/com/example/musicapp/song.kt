@@ -45,4 +45,8 @@ class song(
         Log.v("Song","$name is favourited now")
         return true
     }
+    // added function to display the songs
+    fun DisplaySongs() : String{
+        return "$name - $artist - $year - $duration"
+    }
 }
