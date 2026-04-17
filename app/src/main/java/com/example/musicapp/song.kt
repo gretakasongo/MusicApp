@@ -2,7 +2,11 @@ package com.example.musicapp
 
 import android.util.Log
 
-class song {
+class song(
+    songName: String,
+    songArtist: String,
+    songYear: Int,
+    songDuration: String,) {
 
     // Adding variable for song
     var name : String = ""
@@ -10,6 +14,14 @@ class song {
     var year : Int = 0
     var duration : String = ""
     var path : String = ""
+    
+    // Adding constructor for song
+    init{
+        name = songName
+        artist = songArtist
+        year = songYear
+        duration = songDuration
+    }
 
     // function to play the song
     fun Play(){
