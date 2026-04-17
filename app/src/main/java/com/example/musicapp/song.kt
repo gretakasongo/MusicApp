@@ -13,8 +13,11 @@ class song(
     var artist: String = ""
     var year : Int = 0
     var duration : String = ""
-    var path : String = ""
-    
+
+    // Adding constructor for song
+    constructor(songName: String,songArtist: String)
+            : this(songName,songArtist,0,""){}
+
     // Adding constructor for song
     init{
         name = songName
