@@ -15,6 +15,7 @@ class song(
     var duration : String = ""
 
     // Adding constructor for song
+
     constructor(songName: String,songArtist: String)
             : this(songName,songArtist,0,""){}
 
@@ -45,7 +46,7 @@ class song(
         Log.v("Song","$name is favourited now")
         return true
     }
-    // added function to display the songs
+    // function to display the song
     fun DisplaySongs() : String{
         return "$name - $artist - $year - $duration"
     }

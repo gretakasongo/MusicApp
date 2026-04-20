@@ -15,11 +15,21 @@ class MainActivity : AppCompatActivity() {
 
         // Adding variable for song
         var songName = findViewById<TextView>(R.id.songName)
+        var songdisplay = ""
 
         // Adding songs to the list
-        song("beauty and the beat","Justin Bieber",2022,"3:23")
-        song("risk it all","Bruno Mars",2026,"3:50")
-        song("baby","Justin Bieber",2010,"3:23")
+        var song1 = song("beauty and the beat","Justin Bieber",2022,"3:23")
+        var song2 = song("risk it all","Bruno Mars",2026,"3:50")
+        var song3 = song("baby","Justin Bieber",2010,"3:23")
+
+        // creating array to store songs
+        var songs = arrayOf<song>(song1,song2,song3)
+
+        // for loop to loop through and display items in song array
+        for (song in songs){
+            songdisplay += "${song.DisplaySongs()}\n\n"
+        }
+        songName.text = songdisplay
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
