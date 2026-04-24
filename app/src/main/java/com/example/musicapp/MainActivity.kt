@@ -21,9 +21,11 @@ class MainActivity : AppCompatActivity() {
         var song1 = song("beauty and the beat","Justin Bieber",2022,"3:23")
         var song2 = song("risk it all","Bruno Mars",2026,"3:50")
         var song3 = song("baby","Justin Bieber",2010,"3:23")
+        var song4 = song("bad guy","unknown artist",0,"3:23")
+        var song5 = song("The fate of ophelia","Unknown Artist",0,"3:23")
 
         // creating array to store songs
-        var songs = arrayOf<song>(song1,song2,song3)
+        var songs = arrayOf<song>(song1,song2,song3,song4,song5)
 
         // for loop to loop through and display items in song array
         for (song in songs){

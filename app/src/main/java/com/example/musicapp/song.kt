@@ -3,29 +3,22 @@ package com.example.musicapp
 import android.util.Log
 
 class song(
-    songName: String,
-    songArtist: String,
-    songYear: Int,
-    songDuration: String,) {
-
-    // Adding variable for song
-    var name : String = ""
-    var artist: String = ""
-    var year : Int = 0
-    var duration : String = ""
-
-    // Adding constructor for song
-
-    constructor(songName: String,songArtist: String)
-            : this(songName,songArtist,0,""){}
-
-    // Adding constructor for song
-    init{
-        name = songName
-        artist = songArtist
-        year = songYear
-        duration = songDuration
+    var name: String,
+    var artist: String = "Unknown Artist",
+    var year: Int = 0,
+    var duration: String = ""
+) {
+    // Primary  constructor for name and artist
+    constructor(songName: String, songArtist: String)
+            : this(songName, songArtist, 0, "") {
     }
+    // secondary constructor for only name and duration
+    constructor(songName: String, songDuration: String, isDuration: Boolean)
+            : this(songName, "Unknown Artist", 0, songDuration) {
+    }
+
+
+
 
     // function to play the song
     fun Play(){
